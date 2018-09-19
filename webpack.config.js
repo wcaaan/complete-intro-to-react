@@ -1,18 +1,19 @@
-const path = require("path");
+const path = require('path');
 
 module.exports = {
   context: __dirname,
-  entry: "./js/clientApp.jsx",
-  devtool: "cheap-eval-source-map",
+  entry: './js/clientApp.jsx',
+  devtool: 'cheap-eval-source-map',
   output: {
-    path: path.join(__dirname, "public"),
-    filename: "bundle.js"
+    path: path.join(__dirname, 'public'),
+    filename: 'bundle.js'
   },
   devServer: {
-    publicPath: '/public/'
+    publicPath: '/public/',
+    historyApiFallback: true
   },
   resolve: {
-    extensions: [".js", "jsx", ".json"]
+    extensions: ['.js', '.jsx', '.json']
   },
   stats: {
     colors: true,
