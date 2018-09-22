@@ -5,7 +5,15 @@
     "dev": "webpack-dev-server",
     "format": "prettier --write --single-quote --print-width=120 --parser=flow --tab-width=2 \"js/**/*.{js,jsx}\"",
     "lint": "eslint **/*.{js,jsx} --quiet",
-    "watch": "webpack --watch"
+    "watch": "webpack --watch",
+    "test": "cross-env NODE_ENV=test jest",
+    "test:update": "cross-env NODE_ENV=test jest -u",
+    "test:coverage": "cross-env NODE_ENV=test jest -- --coverage"
+  },
+  "jest": {
+    "snapshotSerializers": [
+      "jest-serializer-enzyme"
+    ]
   },
   "dependencies": {
     "axios": "0.16.1",
@@ -14,6 +22,7 @@
     "babel-register": "6.24.1",
     "compression": "1.6.2",
     "cors": "2.8.3",
+    "cross-env": "5.2.0",
     "express": "4.15.3",
     "lodash": "4.17.4",
     "preact": "8.1.0",
