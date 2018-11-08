@@ -44,11 +44,11 @@ const config = {
       },
       {
         test: /\.jsx?$/,
-        loader: "babel-loader",
-        include: [
-          path.resolve("js"),
-          path.resolve("node_modules/preact-compat/src")
-        ]
+        loader: "babel-loader"
+        // include: [
+        //   path.resolve("js"),
+        //   path.resolve("node_modules/preact-compat/src")
+        // ]
       }
     ]
   }
